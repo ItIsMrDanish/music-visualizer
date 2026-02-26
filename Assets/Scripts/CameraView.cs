@@ -9,13 +9,13 @@ public class CameraView : MonoBehaviour
     public Transform target; // pivot to orbit around. If left null, world origin (0,0,0) is used.
 
     [Header("Distance")]
-    public float distance = 10f;
+    public float distance = 20f;
     public float minDistance = 2f;
     public float maxDistance = 50f;
     public float zoomSpeed = 2f;
 
     [Header("Rotation")]
-    public float rotationSpeed = 200f; // degrees per second per mouse unit
+    public float rotationSpeed = 540f; // degrees per second per mouse unit
     public bool requireMouseButton = true; // if true, hold rightMouseButtonToRotate to rotate
     public int mouseButtonToUse = 1; // 1 = right mouse button, 0 = left, 2 = middle
     public bool invertY = false;
@@ -28,11 +28,11 @@ public class CameraView : MonoBehaviour
     [Header("Smoothing")]
     public bool enableSmoothing = true;
     [Tooltip("Smooth time for rotation (seconds). Lower = snappier.")]
-    public float rotationSmoothTime = 0.12f;
+    public float rotationSmoothTime = 0.25f;
     [Tooltip("Smooth time for positional movement (seconds). Lower = snappier.")]
-    public float positionSmoothTime = 0.12f;
+    public float positionSmoothTime = 0.25f;
     [Tooltip("Smooth time for zoom (seconds). Lower = snappier.")]
-    public float zoomSmoothTime = 0.1f;
+    public float zoomSmoothTime = 0.125f;
 
     // internal (target angles / smoothed values)
     float _yaw;   // target horizontal angle (unclamped / wraps 360)
