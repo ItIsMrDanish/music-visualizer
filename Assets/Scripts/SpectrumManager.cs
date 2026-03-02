@@ -6,7 +6,7 @@ public class SpectrumManager : MonoBehaviour
     public GameObject cubePrefab;
 
     [Header("Audio Spectrum Settings")]
-    public float startFrequency = 20f;
+    public float startFrequency = 30f;
     public float endFrequency = 15000f;
     public int numBands = 64;
     public float maxHeight = 15f;
