@@ -10,7 +10,7 @@ public class SpectrumManager : MonoBehaviour
     public float endFrequency = 15000f;
     public int numBands = 64;
     public float maxHeight = 15f;
-    public float totalWidth = 25f;
+    public float totalWidth = 35f;
     [Range(0.1f, 1f)] public float barSpacing = 0.8f;
     [Tooltip("Lower = Slower. Higher = Faster")] [Range(1f, 100f)] public float smoothSpeed = 10f;
     public DisplaySide displaySide = DisplaySide.Both;

@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraView
   target: {fileID: 0}
-  distance: 20
+  distance: 25
   minDistance: 2
   maxDistance: 50
   zoomSpeed: 2
@@ -312,7 +312,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b6a127d5373c00f45b5bae8e1ae5e9eb, type: 3}
+  m_Resource: {fileID: 8300000, guid: cc351cf6995769b419888df48173845f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -494,10 +494,10 @@ MonoBehaviour:
   analyzer: {fileID: 651129766}
   cubePrefab: {fileID: 1891281026730236659, guid: 61a43454f040c8042a88a58d7300afb4, type: 3}
   startFrequency: 30
-  endFrequency: 2000
+  endFrequency: 15000
   numBands: 64
   maxHeight: 15
-  totalWidth: 25
+  totalWidth: 35
   barSpacing: 0.8
   smoothSpeed: 10
   displaySide: 2
