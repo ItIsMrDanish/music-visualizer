@@ -498,7 +498,7 @@ MonoBehaviour:
   numBands: 64
   maxHeight: 15
   totalWidth: 35
-  barSpacing: 0.8
+  barThickness: 0.8
   smoothSpeed: 10
   displaySide: 2
   spectrumGradient:

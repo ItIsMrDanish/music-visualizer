@@ -11,7 +11,7 @@ public class SpectrumManager : MonoBehaviour
     public int numBands = 64;
     public float maxHeight = 15f;
     public float totalWidth = 35f;
-    [Range(0.1f, 1f)] public float barSpacing = 0.8f;
+    [Range(0.1f, 1f)] public float barThickness = 0.8f;
     [Tooltip("Lower = Slower. Higher = Faster")] [Range(1f, 100f)] public float smoothSpeed = 10f;
     public DisplaySide displaySide = DisplaySide.Both;
     public enum DisplaySide { Top, Bottom, Both }
@@ -41,7 +41,7 @@ public class SpectrumManager : MonoBehaviour
         {
             GameObject instance = Instantiate(cubePrefab, this.transform);
             instance.transform.localPosition = new Vector3(startX + (i * cubeWidth), 0, 0);
-            instance.transform.localScale = new Vector3(cubeWidth * barSpacing, 0.1f, 1);
+            instance.transform.localScale = new Vector3(cubeWidth * barThickness, 0.1f, barThickness);
 
             sampleCubes[i] = instance;
             cubeRenderers[i] = instance.GetComponent<MeshRenderer>();
@@ -83,7 +83,6 @@ public class SpectrumManager : MonoBehaviour
             sampleCubes[i].transform.localScale = newScale;
             sampleCubes[i].transform.localPosition = newPos;
 
-            // 3. Opdater farve baseret på gradient og lydstyrke
             if (cubeRenderers[i] != null)
             {
                 // Find farven baseret på placering (0 = bas, 1 = diskant)
@@ -91,7 +90,7 @@ public class SpectrumManager : MonoBehaviour
                 Color baseColor = spectrumGradient.Evaluate(t);
 
                 // Gør farven lysere/stærkere jo højere søjlen er
-                float intensity = (analyzer.audioBandBuffer[i] * colorMultiplier) + 0.5f;
+                float intensity = (analyzer.audioBandBuffer[i] * colorMultiplier) + 0.75f;
                 cubeRenderers[i].material.color = baseColor * intensity;
 
                 // Hvis du bruger en Shader med Emission, kan du også gøre dette:
