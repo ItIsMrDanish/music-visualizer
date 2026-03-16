@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class SpectrumManager : MonoBehaviour
 {
     [Header("Setup Settings")]
@@ -10,19 +11,23 @@ public class SpectrumManager : MonoBehaviour
     public float endFrequency = 15000f;
     public int numBands = 64;
     public float maxHeight = 15f;
-    public float totalWidth = 35f;
     [Range(0.1f, 1f)] public float barThickness = 0.8f;
-    [Tooltip("Lower = Slower. Higher = Faster")] [Range(1f, 100f)] public float smoothSpeed = 10f;
+    [Tooltip("Lower = Slower. Higher = Faster")][Range(1f, 100f)] public float smoothSpeed = 10f;
     public DisplaySide displaySide = DisplaySide.Both;
     public enum DisplaySide { Top, Bottom, Both }
 
+    [Header("Shape Settings")]
+    public ShapeMode shape = ShapeMode.Line;
+    public float shapeSize = 35f;
+    public enum ShapeMode { Line, Circle, Square, Triangle }
+
     [Header("Color Settings")]
-    public Gradient spectrumGradient; // Lav en flot overgang i Inspectoren
-    [Range(0f, 5f)] public float colorMultiplier = 1.0f; // Gør farverne mere intense/lysende
+    public Gradient spectrumGradient;
+    [Range(0f, 5f)] public float colorMultiplier = 1.0f;
 
     private GameObject[] sampleCubes;
     private float[] currentYScale;
-    private MeshRenderer[] cubeRenderers; // Gem referencer for bedre performance
+    private MeshRenderer[] cubeRenderers;
 
     void Start() { SpawnCubes(); }
 
@@ -34,17 +39,68 @@ public class SpectrumManager : MonoBehaviour
         currentYScale = new float[numBands];
         cubeRenderers = new MeshRenderer[numBands];
 
-        float cubeWidth = (totalWidth / numBands);
-        float startX = -(totalWidth / 2f) + (cubeWidth / 2f);
-
         for (int i = 0; i < numBands; i++)
         {
             GameObject instance = Instantiate(cubePrefab, this.transform);
-            instance.transform.localPosition = new Vector3(startX + (i * cubeWidth), 0, 0);
-            instance.transform.localScale = new Vector3(cubeWidth * barThickness, 0.1f, barThickness);
+
+            // Beregn position og rotation baseret på valgt form
+            SetObjectLayout(instance.transform, i);
 
             sampleCubes[i] = instance;
             cubeRenderers[i] = instance.GetComponent<MeshRenderer>();
+        }
+    }
+
+    // Denne metode beregner hvor hver søjle skal stå og kigge hen
+    void SetObjectLayout(Transform trans, int index)
+    {
+        float t = (float)index / numBands;
+        float width = (shapeSize / numBands);
+
+        switch (shape)
+        {
+            case ShapeMode.Line:
+                float startX = -(shapeSize / 2f) + (width / 2f);
+                trans.localPosition = new Vector3(startX + (index * width), 0, 0);
+                trans.localRotation = Quaternion.identity;
+                trans.localScale = new Vector3(width * barThickness, 0.1f, barThickness);
+                break;
+
+            case ShapeMode.Circle:
+                float angle = t * Mathf.PI * 2f;
+                float radius = shapeSize / 2f;
+                trans.localPosition = new Vector3(Mathf.Cos(angle) * radius, 0, Mathf.Sin(angle) * radius);
+                trans.localRotation = Quaternion.LookRotation(trans.localPosition - transform.position);
+                trans.localScale = new Vector3((radius * 2f * Mathf.PI / numBands) * barThickness, 0.1f, barThickness);
+                break;
+
+            case ShapeMode.Square:
+                // Simpel kvadrat-omkreds logik
+                float sideBands = numBands / 4f;
+                float sideLength = shapeSize / 1.5f;
+                Vector3 pos = Vector3.zero;
+                if (index < sideBands) pos = new Vector3(index * (sideLength / sideBands), 0, 0);
+                else if (index < sideBands * 2) pos = new Vector3(sideLength, 0, (index - sideBands) * (sideLength / sideBands));
+                else if (index < sideBands * 3) pos = new Vector3(sideLength - (index - sideBands * 2) * (sideLength / sideBands), 0, sideLength);
+                else pos = new Vector3(0, 0, sideLength - (index - sideBands * 3) * (sideLength / sideBands));
+
+                trans.localPosition = pos - new Vector3(sideLength / 2f, 0, sideLength / 2f);
+                trans.localRotation = Quaternion.identity;
+                trans.localScale = new Vector3(barThickness, 0.1f, barThickness);
+                break;
+
+            case ShapeMode.Triangle:
+                float triSide = numBands / 3f;
+                float triLen = shapeSize / 1f;
+                Vector3 triPos = Vector3.zero;
+                if (index < triSide) triPos = Vector3.Lerp(new Vector3(0, 0, triLen), new Vector3(triLen / 2f, 0, 0), (index / triSide));
+                else if (index < triSide * 2) triPos = Vector3.Lerp(new Vector3(triLen / 2f, 0, 0), new Vector3(-triLen / 2f, 0, 0), (index - triSide) / triSide);
+                else triPos = Vector3.Lerp(new Vector3(-triLen / 2f, 0, 0), new Vector3(0, 0, triLen), (index - triSide * 2) / triSide);
+
+                trans.localPosition = triPos;
+                trans.localRotation = Quaternion.identity;
+                trans.localScale = new Vector3(barThickness, 0.1f, barThickness);
+                break;
         }
     }
 
@@ -56,14 +112,13 @@ public class SpectrumManager : MonoBehaviour
         {
             if (analyzer.audioBandBuffer == null || i >= analyzer.audioBandBuffer.Length) continue;
 
-            // 1. Beregn højde
             float targetY = (analyzer.audioBandBuffer[i] * maxHeight) + 0.1f;
             currentYScale[i] = Mathf.Lerp(currentYScale[i], targetY, Time.deltaTime * smoothSpeed);
 
-            // 2. Opdater skala og position
             Vector3 newScale = sampleCubes[i].transform.localScale;
             Vector3 newPos = sampleCubes[i].transform.localPosition;
 
+            // Juster Y-skala og position baseret på displaySide
             if (displaySide == DisplaySide.Top)
             {
                 newScale.y = currentYScale[i];
@@ -85,17 +140,14 @@ public class SpectrumManager : MonoBehaviour
 
             if (cubeRenderers[i] != null)
             {
-                // Find farven baseret på placering (0 = bas, 1 = diskant)
                 float t = (float)i / numBands;
                 Color baseColor = spectrumGradient.Evaluate(t);
-
-                // Gør farven lysere/stærkere jo højere søjlen er
                 float intensity = (analyzer.audioBandBuffer[i] * colorMultiplier) + 0.75f;
                 cubeRenderers[i].material.color = baseColor * intensity;
-
-                // Hvis du bruger en Shader med Emission, kan du også gøre dette:
-                // cubeRenderers[i].material.SetColor("_EmissionColor", baseColor * intensity);
             }
         }
     }
+
+    // Hjælpefunktion til at opdatere layout hvis man ændrer form i Inspectoren mens spillet kører
+    private void OnValidate() { if (Application.isPlaying && sampleCubes != null) SpawnCubes(); }
 }
