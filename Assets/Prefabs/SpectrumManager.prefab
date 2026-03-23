@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b66b1b6737c6864aad52442d0a76334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisualizerInstantiator
-  analyzer: {fileID: 0}
+  analyzer: {fileID: 701791003960385715, guid: abac45192cf946f42940f394c904aad1, type: 3}
   cubePrefab: {fileID: 1891281026730236659, guid: 61a43454f040c8042a88a58d7300afb4, type: 3}
   startFrequency: 30
   endFrequency: 15000
