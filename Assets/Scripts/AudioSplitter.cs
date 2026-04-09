@@ -2,7 +2,7 @@ using UnityEngine;
 
 /// <summary>
 /// Opdeler frekvensbånd fra MusicAnalyzer i tre overordnede zoner: Bas, Mellemtone og Diskant.
-/// Indeholder nu en debug-funktion til at visualisere de tre peaks direkte i scenen.
+/// Indeholder en debug-funktion til at visualisere de tre peaks direkte i scenen.
 /// </summary>
 public class AudioSplitter : MonoBehaviour
 {
@@ -10,13 +10,13 @@ public class AudioSplitter : MonoBehaviour
     public MusicAnalyzer analyzer;
     public bool showDebug = true; // Debug toggle
 
-    [Header("Område Fordeling (%)")]
+    [Header("Audio Split (%)")]
     [Tooltip("Hvor stor en procentdel af båndene der skal være bas (0.0 - 1.0)")]
     [Range(0f, 1f)] public float bassThreshold = 0.15f;
     [Tooltip("Hvor stor en procentdel der skal være mellemtone (0.0 - 1.0)")]
     [Range(0f, 1f)] public float midThreshold = 0.45f;
 
-    [Header("Output Værdier (Read Only)")]
+    [Header("Output Values (Read Only)")]
     public float bassPeak;
     public float midPeak;
     public float treblePeak;
