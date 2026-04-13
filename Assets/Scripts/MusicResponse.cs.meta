@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 08dbcb31462b8df44a7a70d282cf2902
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - splitter: {fileID: 8254037688912642284, guid: 61cb93539a7e4604a87e4c056b0cc8f5, type: 3}
+  - targetLight: {instanceID: 0}
+  - targetCamera: {instanceID: 0}
+  - targetRenderer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
