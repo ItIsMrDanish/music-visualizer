@@ -176,7 +176,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &47711046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &69106979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -516,7 +516,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &72741278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1161,7 +1161,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -1181,7 +1181,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &593942714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1464,7 +1464,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -1484,7 +1484,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.15
+  colorMultiplier: 0.25
 --- !u!65 &722784177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1634,7 +1634,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -1654,7 +1654,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &843239314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &1042445261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2039,7 +2039,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -2059,7 +2059,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &1135743244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2209,7 +2209,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -2229,7 +2229,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.15
+  colorMultiplier: 0.25
 --- !u!65 &1443711346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2379,7 +2379,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -2399,7 +2399,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.15
+  colorMultiplier: 0.25
 --- !u!65 &1476782302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2501,9 +2501,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 577715929511737938, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577715929511737938, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: cc351cf6995769b419888df48173845f, type: 3}
+    - target: {fileID: 577715929511737938, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 615357946670247045, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
       propertyPath: m_Name
       value: AudioSource
@@ -2551,13 +2559,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 615357946670247045, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526024996}
   m_SourcePrefab: {fileID: 100100000, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
 --- !u!82 &1526024994 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 577715929511737938, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
   m_PrefabInstance: {fileID: 1526024993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1526024995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 615357946670247045, guid: 213df2f2433b76c44802604fdbf055ce, type: 3}
+  m_PrefabInstance: {fileID: 1526024993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1526024996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526024995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31133d634670bd645bbb1956efde9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneMusicLoader
+  audioSource: {fileID: 1526024994}
+  musicTracks:
+  - {fileID: 8300000, guid: cc351cf6995769b419888df48173845f, type: 3}
+  - {fileID: 8300000, guid: 4bf29ff91ff386e4db27fd6209ac0d26, type: 3}
+  - {fileID: 8300000, guid: 2c15de22530cb8740a5342b3d44ca2ea, type: 3}
+  - {fileID: 8300000, guid: b6a127d5373c00f45b5bae8e1ae5e9eb, type: 3}
+  - {fileID: 8300000, guid: 2a6bda120e18573428107f45a59f9ab3, type: 3}
 --- !u!1 &1536884421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,7 +2650,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -2635,7 +2670,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &1536884423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3412,7 +3447,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -3432,7 +3467,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.15
+  colorMultiplier: 0.25
 --- !u!65 &1902344671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3582,7 +3617,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -3602,7 +3637,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &2049610343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3752,7 +3787,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -3772,7 +3807,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.15
+  colorMultiplier: 0.25
 --- !u!65 &2057395281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3922,7 +3957,7 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 42598
+    ctime0: 58982
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -3942,7 +3977,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  colorMultiplier: 0.31
+  colorMultiplier: 0.25
 --- !u!65 &2103132986
 BoxCollider:
   m_ObjectHideFlags: 0
